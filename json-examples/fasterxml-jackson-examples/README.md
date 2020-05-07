@@ -6,7 +6,13 @@
 - [Java JSON Jackson Introduction](http://www.studytrails.com/java/json/java-jackson-introduction/)
 - [Jackson详细介绍](https://blog.csdn.net/u012129558/article/details/78772615)
 
+- [Jackson 工具类使用及配置指南](https://www.cnblogs.com/yuluoxingkong/p/7676089.html)
+
 jackson 开源项目应用可以参考 spring-data-xx (推荐 spring-data-elasticsearch，代码相对简单)。
+
+
+## IMPORTANT CODE
+- `com.fasterxml.jackson.core.json.JsonReadFeature`
 
 ## FAQ
 

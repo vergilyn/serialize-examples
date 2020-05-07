@@ -38,6 +38,7 @@ public class JacksonTestng {
 
     @Test
     public void deserialize() throws JsonProcessingException {
+
         ObjectMapper objectMapper = new ObjectMapper();
 
         String json = JacksonDto.json();
