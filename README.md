@@ -8,3 +8,4 @@
 
 ## buffer
 - google, protobuf
+- codec
