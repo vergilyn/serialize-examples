@@ -2,11 +2,13 @@ package com.vergilyn.examples.json.jackson;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.json.JsonReadFeature;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -50,6 +52,15 @@ public class JacksonTestng {
         System.out.println("deserialize >>>> " + dto);
 
         Assert.assertTrue(StringUtils.isBlank(dto.ignoreField));
+    }
+
+    @Test
+    public void deserializeArray() throws JsonProcessingException {
+        String json = "[0, 1, 2]";
+        ObjectMapper objectMapper = new ObjectMapper();
+        List<Integer> integers = objectMapper.readValue(json, new TypeReference<List<Integer>>() {});
+
+        System.out.println(integers);
     }
 
     @Data
